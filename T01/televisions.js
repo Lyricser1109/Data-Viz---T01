@@ -3,7 +3,7 @@
   const page = document.querySelector('#televisions');
 
   // Each question owns its graph filenames, captions and accessible descriptions.
-  // Files are stored in public/graphs, one level above the T01 folder.
+  // Files are stored in public/graphs inside the T01 folder.
   const questions = [
     {
       title: 'What type of TV screen technologies are currently available in Australia and which are the most frequent?',
@@ -92,7 +92,7 @@
   const questionSections = questions.map((question, index) => {
     const questionNumber = index + 1;
     const figures = question.graphs.map(graph => {
-      const imagePath = `../public/graphs/${encodeURIComponent(graph.file)}`;
+      const imagePath = `public/graphs/${encodeURIComponent(graph.file)}`;
 
       return `
         <figure class="research-figure">
